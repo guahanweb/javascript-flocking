@@ -1,0 +1,52 @@
+@import 'includes/_variables.scss';
+@import 'includes/_reset.scss';
+
+body {
+    font-family: $copy-font-default;
+    background-color: $bg-main;
+
+    & > header, & > main {
+        width: 920px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    & > header {
+        border-bottom: 1px solid #aaa;
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
+
+main {
+    .example {
+        margin: 15px;
+        padding: 20px 15px;
+        background-color: #fff;
+        border: 2px solid #aaa;
+        border-radius: 5px;
+
+        & > header {
+            padding: 5px 0;
+
+            h2 {
+                font-size: 16px;
+                color: #999;
+            }
+        }
+
+        & > .wrapper {
+            width: 600px;
+            height: 380px;
+            background-color: $bg-canvas;
+            border: 1px solid #fff;
+
+            & > canvas {
+                width: 600px;
+                height: 380px;
+            }
+        }
+    }
+}
