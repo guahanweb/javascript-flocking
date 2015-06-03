@@ -18,6 +18,11 @@ var Canvas = function (id) {
     this.height = this.canvas.offsetHeight;
     this.width  = this.canvas.offsetWidth;
 
+    // Be sure the canvas object has attributes on it
+    // Without this, some browsers bork the dimensional rendering
+    this.canvas.setAttribute('height', this.height);
+    this.canvas.setAttribute('width', this.width);
+
     // Set up environmental elements
     this.objects = [];
 
